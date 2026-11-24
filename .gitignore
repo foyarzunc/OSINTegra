@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editores
+.vscode/
+.idea/
+
+# Salidas generadas por las herramientas
+reports/
+*.log
+
+# Datos scrapeados y secretos: nunca versionar
+belencerda.txt
+session_*.txt
+*.sessionid
+sessionid*
+*_session.txt
+
+# Credenciales
+.env
+.env.*

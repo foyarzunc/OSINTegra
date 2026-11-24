@@ -1,0 +1,23 @@
+# Dependencias de OSINTegra
+#
+# Las herramientas del repo son independientes:
+#
+#   test_ig_scrapper.py -> scraper de Instagram (lib/)
+#   osintprofiler.py    -> profiler OSINT de fuentes abiertas
+
+
+# --- Scraper de Instagram (lib/) ---
+#
+# Unica dependencia externa, y a proposito NO es "requests": Instagram
+# rechaza las peticiones cuya huella TLS no parece la de un navegador
+# ("requests" recibe el error 1357054 aunque la sesion y los tokens sean
+# correctos). curl_cffi falsifica ese handshake y mantiene la misma API,
+# asi que las dos capas HTTP (anonima y con sesion) usan la misma libreria.
+curl_cffi>=0.7
+
+
+# --- Profiler OSINT (osintprofiler.py) ---
+scrapling>=0.5
+lxml>=5.0
+pytz>=2024.1
+requests>=2.31
